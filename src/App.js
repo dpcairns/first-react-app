@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import NavBar from './NavBar.js';
 import './App.css';
+import './index.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <NavBar links={[
+          {
+              location: 'https://yahoo.com',
+              description: 'recipes'
+          },
+          {
+              location: 'https://bing.com',
+              description: 'popular'
+          },
+          {
+              location: 'https://yahoo.com',
+              description: 'spring cooking'
+          },
+        ]} />
+        {/* <RecipeHeader /> */}
+        {/* <ImagesSection /> */}
+        {/* <RecipeSection /> */}
+      </div>
+    )
+  }
 }
-
-export default App;
